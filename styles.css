@@ -12,7 +12,6 @@
   --panel: #fbfbfb;
   --stroke: rgba(14, 14, 14, 0.14);
   --shadow: 0 18px 50px rgba(14, 14, 14, 0.12);
-
   --radius: 16px;
 
   --space-1: 8px;
@@ -24,9 +23,11 @@
   --space-7: 72px;
 }
 
+/* ===== Base ===== */
 * {
   box-sizing: border-box;
 }
+
 html,
 body {
   height: 100%;
@@ -44,6 +45,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 main {
   flex: 1;
 }
@@ -52,6 +54,7 @@ img {
   max-width: 100%;
   display: block;
 }
+
 a {
   color: inherit;
   text-decoration: none;
@@ -62,7 +65,7 @@ a {
   margin: 0 auto;
 }
 
-/* Typography */
+/* ===== Typography ===== */
 .h1 {
   font-size: clamp(2rem, 3.5vw, 3rem);
   margin: 0 0 var(--space-3);
@@ -87,17 +90,19 @@ a {
   padding: var(--space-6) 0;
 }
 
+/* ===== Card ===== */
 .card {
   background: var(--panel);
   border: 1px solid var(--stroke);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
+
 .card-pad {
   padding: var(--space-5);
 }
 
-/* Header + nav (hvid baggrund) */
+/* ===== Header + nav ===== */
 .site-header {
   border-bottom: 1px solid var(--stroke);
   position: sticky;
@@ -105,6 +110,7 @@ a {
   background: var(--white);
   z-index: 10;
 }
+
 .header-inner {
   display: flex;
   align-items: center;
@@ -112,6 +118,7 @@ a {
   padding: var(--space-3) 0;
   gap: var(--space-3);
 }
+
 .logo {
   font-weight: 600;
   letter-spacing: 0.2px;
@@ -123,263 +130,38 @@ a {
   flex-wrap: wrap;
   align-items: center;
 }
+
 .nav a {
   padding: 8px 10px;
   border-radius: 10px;
   color: var(--text);
 }
+
 .nav a:hover {
   background: rgba(14, 14, 14, 0.06);
 }
+
 .nav a.active {
   background: rgba(45, 15, 7, 0.1);
   color: var(--c1);
 }
 
-/* Booking som button (Source Sans 3)  */
+/* Booking som button (Source Sans 3) */
 .nav .nav-btn {
   font-family: "Source Sans 3", system-ui, sans-serif;
   background: var(--c1);
-  color: var(--white); /* altid hvid */
+  color: var(--white);
   font-weight: 600;
   border-radius: 12px;
   padding: 10px 14px;
 }
+
 .nav .nav-btn:hover {
-  background: var(--c2); /* hover = secondary 2 */
-  color: var(--c1); /* hover tekst = secondary 1 */
-}
-
-/* Hero */
-.hero {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--radius);
-  border: 1px solid var(--stroke);
-}
-.hero img {
-  width: 100%;
-  height: min(70vh, 520px);
-  object-fit: cover;
-}
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  align-content: center;
-  padding: var(--space-6);
-}
-.hero-text {
-  max-width: 560px;
-}
-
-/* Tekstboks under hero */
-.hero-note {
-  margin-top: 0; /* direkte under hero */
-  background: var(--c1);
-  border-color: rgba(251, 251, 251, 0.22);
-}
-.hero-note .h2,
-.hero-note .p {
-  color: var(--white);
-}
-
-/* Split boxes */
-.split-list {
-  display: grid;
-  gap: var(--space-4);
-  margin-top: var(--space-7); /* stort mellemrum (Gestalt) */
-}
-.split {
-  display: grid;
-  gap: var(--space-4);
-  align-items: center;
-  overflow: hidden;
-}
-
-/* Box 1/2/3 cards = third color, tekst = secondary 1 */
-.split.card {
-  background: var(--c3);
-}
-.split.card .h2,
-.split.card .p {
-  color: var(--c1);
-}
-
-.split-media img {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-}
-@media (min-width: 900px) {
-  .split {
-    grid-template-columns: 1fr 1fr;
-  }
-  .split.reverse {
-    grid-template-columns: 1fr 1fr;
-  }
-  .split.reverse .split-media {
-    order: -1;
-  }
-}
-
-/* Gallery */
-.gallery {
-  display: grid;
-  gap: var(--space-3);
-  margin-top: var(--space-4);
-}
-.gallery .tile {
-  overflow: hidden;
-  border-radius: 14px;
-  border: 1px solid var(--stroke);
-}
-.gallery img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
-@media (min-width: 800px) {
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* P under gallery centreret */
-.p-center {
-  text-align: center;
-}
-
-/* Theme: secondary cards (Priser + Kontakt + Booking login-card) */
-.theme-secondary {
-  background: var(--c1);
-  border-color: rgba(251, 251, 251, 0.22);
-}
-.theme-secondary .h1,
-.theme-secondary .h2,
-.theme-secondary .p,
-.theme-secondary small,
-.theme-secondary .label,
-.theme-secondary .table th,
-.theme-secondary .table td {
-  color: var(--white);
-}
-
-/* Tables / prices */
-.table {
-  width: 100%;
-  border-collapse: collapse;
-}
-.table th,
-.table td {
-  text-align: left;
-  padding: 14px 12px;
-  border-bottom: 1px solid rgba(251, 251, 251, 0.22);
-}
-.table th {
-  font-weight: 600;
-}
-.table td {
-  font-weight: 400;
-}
-.table-wrap {
-  overflow-x: auto;
-}
-
-/* Forms */
-.field {
-  display: grid;
-  gap: var(--space-1);
-  margin-bottom: var(--space-3);
-}
-.label {
-  font-size: 0.95rem;
-  font-weight: 400;
-}
-
-.input {
-  width: 100%;
-  padding: 12px 14px;
-  border-radius: 12px;
-  border: 1px solid var(--stroke);
-  background: rgba(251, 251, 251, 0.9);
-  color: var(--text);
-  outline: none;
-}
-.input:focus {
-  border-color: rgba(45, 15, 7, 0.45);
-  box-shadow: 0 0 0 4px rgba(45, 15, 7, 0.14);
-}
-
-/* Buttons = Source Sans 3 + hover regler */
-.btn {
-  font-family: "Source Sans 3", system-ui, sans-serif;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 12px 16px;
-  border: 0;
-  border-radius: 12px;
-  background: var(--c1);
-  color: var(--white);
-  font-weight: 600;
-  cursor: pointer;
-}
-.btn.full {
-  width: 100%;
-}
-.btn:hover {
-  background: var(--c3);
-  color: var(--c1);
-}
-
-/* Knap-variant: secondary 2 (til login-knappen) */
-.btn-sec2 {
-  background: var(--c2);
-  color: var(--white);
-}
-.btn-sec2:hover {
-  background: var(--c3);
-  color: var(--c1);
-}
-
-/* Genbrugelig booking-knap til indhold (samme stil som header) */
-.booking-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Source Sans 3", system-ui, sans-serif;
-  background: var(--c1);
-  color: var(--white);
-  font-weight: 600;
-  border-radius: 12px;
-  padding: 10px 14px;
-}
-.booking-btn:hover {
   background: var(--c2);
   color: var(--c1);
 }
 
-.link {
-  color: var(--c1);
-  text-decoration: underline; /* <-- altid underline */
-}
-
-.link:hover {
-  text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
-}
-
-/* Footer (hvid baggrund) */
-.site-footer {
-  border-top: 1px solid var(--stroke);
-  background: var(--white);
-  padding: var(--space-5) 0;
-  color: var(--text);
-}
-
-/* --- Burger button --- */
+/* ===== Burger ===== */
 .burger {
   display: inline-flex;
   flex-direction: column;
@@ -390,6 +172,7 @@ a {
   border-radius: 12px;
   cursor: pointer;
 }
+
 .burger-line {
   width: 24px;
   height: 2px;
@@ -418,6 +201,7 @@ a {
     border-radius: var(--radius);
     box-shadow: var(--shadow);
   }
+
   .nav[data-state="open"] {
     display: flex;
   }
@@ -429,13 +213,8 @@ a {
   .nav-btn {
     text-align: center;
   }
-
-  .burger {
-    display: inline-flex;
-  }
 }
 
-/* Desktop: burger skjult, menu altid synlig */
 @media (min-width: 900px) {
   .burger {
     display: none;
@@ -462,71 +241,120 @@ a {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* ===== INDEX-SPECIFIKKE RETTELSER ===== */
-
-/* Undertekst i hero (p2) italic */
-.hero-sub {
-  font-style: italic;
-}
-
-/* Center velkomst-header i hero-note */
-.hero-note-title {
-  text-align: center;
-}
-
-/* Center overskrift: ØJEBLIKKE FRA SALONEN */
-.section-title-center {
-  text-align: center;
-}
-
-/* Box 1/2/3: third color med 50% opacity (kun baggrund, ikke tekst) */
-.split.card {
-  background: rgba(155, 118, 66, 0.8); /* #*/
-}
-/* === HERO overlay uden at påvirke tekst === */
-
-/* Sørg for hero er anker for absolute layers */
+/* ===== Hero ===== */
 .hero {
   position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--stroke);
 }
 
-/* Billedet nederst */
 .hero img {
+  width: 100%;
+  height: min(70vh, 520px);
+  object-fit: cover;
   position: relative;
   z-index: 0;
-  /* vigtig: INGEN opacity her */
 }
 
-/* Overlay-lag (50% dæmpning) */
+/* Overlay-lag (dæmper billedet uden at gøre tekst gennemsigtig) */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(224, 224, 226, 0.5); /* 50% */
+  background: rgba(224, 224, 226, 0.5);
   z-index: 1;
 }
 
-/* Tekst-laget OVER overlay og billede */
 .hero-overlay {
-  position: absolute; /* <-- vigtigt! */
+  position: absolute;
   inset: 0;
+  display: grid;
+  align-content: center;
+  padding: var(--space-6);
   z-index: 2;
 }
-/* === Forbedret centrering af tekst i box 1,2,3 === */
 
-/* Tekstkolonnen */
+.hero-text {
+  max-width: 560px;
+}
+
+/* Undertekst i hero italic */
+.hero-sub {
+  font-style: italic;
+}
+
+/* ===== Tekstboks under hero ===== */
+.hero-note {
+  margin-top: 0;
+  background: var(--c1);
+  border-color: rgba(251, 251, 251, 0.22);
+}
+
+.hero-note .h2,
+.hero-note .p {
+  color: var(--white);
+}
+
+/* Center velkomst-header */
+.hero-note-title {
+  text-align: center;
+}
+
+/* ===== Split boxes ===== */
+.split-list {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: var(--space-7);
+}
+
+.split {
+  display: grid;
+  gap: var(--space-4);
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Box 1/2/3 card baggrund med opacity (kun baggrund, ikke tekst) */
+.split.card {
+  background: rgba(155, 118, 66, 0.8); /* #9B7642 med alpha */
+}
+
+/* Tekstfarve i box 1/2/3 */
+.split.card .h2,
+.split.card .p {
+  color: var(--c1);
+}
+
+.split-media img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+@media (min-width: 900px) {
+  .split {
+    grid-template-columns: 1fr 1fr;
+  }
+  .split.reverse {
+    grid-template-columns: 1fr 1fr;
+  }
+  .split.reverse .split-media {
+    order: -1;
+  }
+}
+
+/* Forbedret centrering/balance af tekst i box 1/2/3 */
 .split .card-pad {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertikal balance */
+  justify-content: center;
 }
 
-/* Begræns og centrér tekst-indholdet horisontalt */
 .split .card-pad > * {
-  max-width: 420px; /* justér evt. 380–460px */
+  max-width: 420px;
 }
 
-/* Når billedet er til højre (normal split) */
 @media (min-width: 900px) {
   .split:not(.reverse) .card-pad {
     align-items: flex-start;
@@ -534,17 +362,195 @@ a {
     padding-right: clamp(24px, 4vw, 48px);
   }
 
-  /* Når billedet er til venstre (reverse split) */
   .split.reverse .card-pad {
     align-items: flex-start;
     padding-right: clamp(24px, 6vw, 72px);
     padding-left: clamp(24px, 4vw, 48px);
   }
 }
-/* Center H1 på kontaktsiden */
+
+/* ===== Gallery ===== */
+.gallery {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.gallery .tile {
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid var(--stroke);
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+@media (min-width: 800px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.p-center {
+  text-align: center;
+}
+
+/* Center overskrift (ØJEBLIKKE...) */
+.section-title-center {
+  text-align: center;
+}
+
+/* ===== Theme: secondary cards (Priser/Kontakt/Booking card) ===== */
+.theme-secondary {
+  background: var(--c1);
+  border-color: rgba(251, 251, 251, 0.22);
+}
+
+.theme-secondary .h1,
+.theme-secondary .h2,
+.theme-secondary .p,
+.theme-secondary small,
+.theme-secondary .label,
+.theme-secondary .table th,
+.theme-secondary .table td {
+  color: var(--white);
+}
+
+/* ✅ FIX: links inde i theme-secondary skal være synlige */
+.theme-secondary a.link {
+  color: var(--white);
+}
+
+/* ===== Table ===== */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 14px 12px;
+  border-bottom: 1px solid rgba(251, 251, 251, 0.22);
+}
+
+.table th {
+  font-weight: 600;
+}
+.table td {
+  font-weight: 400;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+/* ===== Forms ===== */
+.field {
+  display: grid;
+  gap: var(--space-1);
+  margin-bottom: var(--space-3);
+}
+
+.label {
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--stroke);
+  background: rgba(251, 251, 251, 0.9);
+  color: var(--text);
+  outline: none;
+}
+
+.input:focus {
+  border-color: rgba(45, 15, 7, 0.45);
+  box-shadow: 0 0 0 4px rgba(45, 15, 7, 0.14);
+}
+
+/* ===== Buttons ===== */
+.btn {
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--c1);
+  color: var(--white);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn.full {
+  width: 100%;
+}
+
+.btn:hover {
+  background: var(--c3);
+  color: var(--c1);
+}
+
+.btn-sec2 {
+  background: var(--c2);
+  color: var(--white);
+}
+
+.btn-sec2:hover {
+  background: var(--c3);
+  color: var(--c1);
+}
+
+.booking-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  background: var(--c1);
+  color: var(--white);
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 10px 14px;
+}
+
+.booking-btn:hover {
+  background: var(--c2);
+  color: var(--c1);
+}
+
+/* Links (global) */
+.link {
+  color: var(--c1);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.link:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  border-top: 1px solid var(--stroke);
+  background: var(--white);
+  padding: var(--space-5) 0;
+  color: var(--text);
+}
+
+/* Kontakt side H1 center */
 .contact-title {
   text-align: center;
 }
+
 /* ===== Brand (header + footer) ===== */
 .brand {
   display: inline-flex;
@@ -561,18 +567,13 @@ a {
 .brand-text {
   font-family: "Source Serif 4", serif;
   font-style: italic;
-  font-weight: 300; /* light italic */
+  font-weight: 300;
   font-size: 1.1rem;
   letter-spacing: 0.2px;
   color: var(--text);
 }
 
-/* Header: sørg for brand ikke bliver klemt */
-.header-inner {
-  align-items: center;
-}
-
-/* ===== Footer layout ===== */
+/* Footer layout */
 .footer-inner {
   display: flex;
   align-items: flex-start;
@@ -612,7 +613,6 @@ a {
   font-weight: 400;
 }
 
-/* Social icons */
 .social-row {
   display: flex;
   gap: 12px;
@@ -625,7 +625,6 @@ a {
   object-fit: contain;
 }
 
-/* Responsiv footer: stack på mobil */
 @media (max-width: 700px) {
   .footer-inner {
     flex-direction: column;
@@ -635,13 +634,7 @@ a {
   .footer-col {
     min-width: 0;
   }
-
   .footer-social {
     align-self: flex-start;
   }
-}
-.brand-icon {
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
 }
