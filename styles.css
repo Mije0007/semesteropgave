@@ -638,3 +638,26 @@ a {
     align-self: flex-start;
   }
 }
+/* ===== Booking/Login typografi (kun på auth-card) ===== */
+.auth-card .h1 {
+  margin-bottom: 20px;
+}
+
+/* “Har du glemt dit kodeord?” skal føles som en lille tekstlink-linje */
+.auth-card .p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Gør sign-up overskriften mindre og mere proportional */
+.auth-card h2.h2 {
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  line-height: 1.25;
+  margin-top: 24px !important; /* overruler inline margin-top */
+  margin-bottom: 10px;
+}
+
+/* Gør link-linjen “Tilmeld dig her” lidt mere “call to action” men stadig rolig */
+.auth-card a.link {
+  font-size: 1rem;
+}
