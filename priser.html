@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Priser</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Forside">
+          <img class="brand-icon" src="assets/img/logo.png" alt="Logo" />
+          <span class="brand-text">Synne Coiffure</span>
+        </a>
+
+        <button
+          class="burger"
+          type="button"
+          aria-label="Åbn menu"
+          aria-controls="site-nav"
+          aria-expanded="false"
+        >
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+
+        <nav id="site-nav" class="nav" data-state="closed">
+          <a href="index.html">Forside</a>
+          <a href="priser.html">Priser</a>
+          <a href="kontakt.html">Kontakt</a>
+          <a class="nav-btn" href="bookinglogin.html">Booking</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="section">
+        <div class="card card-pad theme-secondary">
+          <h1 class="h1">Priser</h1>
+
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Behandling</th>
+                  <th>Beskrivelse</th>
+                  <th>Pris (DKK)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Dameklip – kort hår</strong></td>
+                  <td>Vask, klip, føn &amp; styling</td>
+                  <td><strong>850 kr.</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Dameklip – mellemlangt hår</strong></td>
+                  <td>Vask, klip, føn &amp; styling</td>
+                  <td><strong>930 kr.</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Dameklip – langt hår</strong></td>
+                  <td>Vask, klip, føn &amp; styling</td>
+                  <td><strong>1.050 kr.</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Herreklip – standard</strong></td>
+                  <td>Vask, klip, styling</td>
+                  <td><strong>650 kr.</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Herreklip – barberet fade</strong></td>
+                  <td>Inkl. vask &amp; finish</td>
+                  <td><strong>720 kr.</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Vask &amp; føn (uden klip)</strong></td>
+                  <td>Kun vask, føn &amp; styling</td>
+                  <td><strong>420 kr.</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Skægtrimning</strong></td>
+                  <td>Skægform, trim &amp; finish</td>
+                  <td><strong>280 kr.</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Hårkur/treatment</strong></td>
+                  <td>Dybepleje (10 min)</td>
+                  <td><strong>220 kr.</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Farve – toning</strong></td>
+                  <td>Farvetoning (kort/mellemlangt)</td>
+                  <td><strong>780 kr.</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Farve – helfarve</strong></td>
+                  <td>Farvning hele håret</td>
+                  <td><strong>1.100 kr.</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Highlights</strong></td>
+                  <td>Med folier, kort/mellemlangt</td>
+                  <td><strong>1.350 kr.</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Balayage/ombre</strong></td>
+                  <td>Avanceret farveteknik</td>
+                  <td><strong>1.800 kr.</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <!-- Venstre: brand -->
+        <div class="footer-col footer-brand">
+          <a class="brand" href="index.html" aria-label="Forside">
+            <img class="brand-icon" src="assets/img/logo.png" alt="Logo" />
+            <span class="brand-text">Synne Coiffure</span>
+          </a>
+        </div>
+
+        <!-- Midte: adresse + telefon -->
+        <div class="footer-col footer-info">
+          <div class="footer-block">
+            <h3 class="footer-h3">Adresse</h3>
+            <p class="footer-p">Pilestræde 27,1112 København K</p>
+          </div>
+
+          <div class="footer-block">
+            <h3 class="footer-h3">Telefon</h3>
+            <p class="footer-p">33 93 33 92</p>
+          </div>
+        </div>
+
+        <!-- Højre: social -->
+        <div class="footer-col footer-social">
+          <h3 class="footer-h3">Følg os</h3>
+          <div class="social-row">
+            <a class="social-link" href="#" aria-label="Instagram">
+              <img
+                class="social-icon"
+                src="assets/img/instagram.png"
+                alt="Instagram"
+              />
+            </a>
+            <a class="social-link" href="#" aria-label="Facebook">
+              <img
+                class="social-icon"
+                src="assets/img/facebook.png"
+                alt="Facebook"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+  </body>
+</html>

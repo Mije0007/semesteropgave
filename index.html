@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Forside</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Forside">
+          <img class="brand-icon" src="assets/img/logo.png" alt="Logo" />
+          <span class="brand-text">Synne Coiffure</span>
+        </a>
+
+        <button
+          class="burger"
+          type="button"
+          aria-label="Åbn menu"
+          aria-controls="site-nav"
+          aria-expanded="false"
+        >
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+
+        <nav id="site-nav" class="nav" data-state="closed">
+          <a href="index.html">Forside</a>
+          <a href="priser.html">Priser</a>
+          <a href="kontakt.html">Kontakt</a>
+          <a class="nav-btn" href="bookinglogin.html">Booking</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="section">
+        <div class="hero">
+          <img src="assets/img/hero.png" alt="" />
+          <div class="hero-overlay">
+            <div class="hero-text">
+              <h1 class="h1">TIDLØS FRISØR KUNST</h1>
+              <!-- p2 tekst (undertekst) skrå -->
+              <h2 class="h2 hero-sub">I hjertet af København K</h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tekstboks under hero -->
+        <div class="card card-pad hero-note">
+          <h2 class="h2 hero-note-title">VELKOMMEN TIL SYNNE COIFFURE</h2>
+          <p class="p">
+            Midt i København ligger en salon, hvor ro, æstetik og kompromisløs
+            kvalitet går hånd i hånd. Frisørhåndværket bygger på mange års
+            erfaring og respekt for det enkelte menneske. <br />
+            <br />Hver behandling tager udgangspunkt i dig - dine træk, din stil
+            og dit liv. Intet er tilfældigt, og intet er forhastet.
+            <br /><br />Gennemført frisørkunst med respekt for traditionen og
+            blik for det moderne.
+          </p>
+        </div>
+
+        <div class="split-list">
+          <article class="card split">
+            <div class="card-pad">
+              <h2 class="h2">Klip og form</h2>
+              <p class="p">
+                Form, balance og præcision. <br />
+                <br />Tilpasset dit hår og din hverdag.
+              </p>
+            </div>
+            <div class="split-media">
+              <img src="assets/img/box1.jpg" alt="" />
+            </div>
+          </article>
+
+          <article class="card split reverse">
+            <div class="card-pad">
+              <h2 class="h2">Farve & forfinelse</h2>
+              <p class="p">
+                Naturlige nuancer og dybde. <br /><br />
+                Skabt med blik for helheden.
+              </p>
+            </div>
+            <div class="split-media">
+              <img src="assets/img/box2.jpg" alt="" />
+            </div>
+          </article>
+
+          <article class="card split">
+            <div class="card-pad">
+              <h2 class="h2">Book din tid</h2>
+              <p class="p">
+                En rolig oplevelse med fuld opmærksomhed. <br /><br />Tid til
+                dig - fra start til slut.
+              </p>
+
+              <a class="booking-btn" href="booking.html">Booking</a>
+            </div>
+            <div class="split-media">
+              <img src="assets/img/box3.jpg" alt="" />
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="h2 section-title-center">ØJEBLIKKE FRA SALONEN</h2>
+
+        <div class="gallery">
+          <div class="tile"><img src="assets/img/gallery1.jpg" alt="" /></div>
+          <div class="tile"><img src="assets/img/gallery2.jpg" alt="" /></div>
+          <div class="tile"><img src="assets/img/gallery3.jpg" alt="" /></div>
+        </div>
+
+        <p class="p p-center" style="margin-top: 24px">
+          Klar til din næste tid?
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <!-- Venstre: brand -->
+        <div class="footer-col footer-brand">
+          <a class="brand" href="index.html" aria-label="Forside">
+            <img class="brand-icon" src="assets/img/logo.png" alt="Logo" />
+            <span class="brand-text">Synne Coiffure</span>
+          </a>
+        </div>
+
+        <!-- Midte: adresse + telefon -->
+        <div class="footer-col footer-info">
+          <div class="footer-block">
+            <h3 class="footer-h3">Adresse</h3>
+            <p class="footer-p">Pilestræde 27,1112 København K</p>
+          </div>
+
+          <div class="footer-block">
+            <h3 class="footer-h3">Telefon</h3>
+            <p class="footer-p">33 93 33 92</p>
+          </div>
+        </div>
+
+        <!-- Højre: social -->
+        <div class="footer-col footer-social">
+          <h3 class="footer-h3">Følg os</h3>
+          <div class="social-row">
+            <a class="social-link" href="#" aria-label="Instagram">
+              <img
+                class="social-icon"
+                src="assets/img/instagram.png"
+                alt="Instagram"
+              />
+            </a>
+            <a class="social-link" href="#" aria-label="Facebook">
+              <img
+                class="social-icon"
+                src="assets/img/facebook.png"
+                alt="Facebook"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+  </body>
+</html>
