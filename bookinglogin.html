@@ -3,21 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Forside</title>
+    <title>Booking</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,300;1,400&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/png" href="assets/img/logo.png" />
 
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="logo" href="index.html">Brand</a>
+        <a class="brand" href="index.html" aria-label="Forside">
+          <img class="brand-icon" src="assets/img/logo.png" alt="Logo" />
+          <span class="brand-text">Synne Coiffure</span>
+        </a>
 
         <button
           class="burger"
@@ -32,7 +36,7 @@
         </button>
 
         <nav id="site-nav" class="nav" data-state="closed">
-          <a class="active" href="index.html">Forside</a>
+          <a href="index.html">Forside</a>
           <a href="priser.html">Priser</a>
           <a href="kontakt.html">Kontakt</a>
           <a class="nav-btn" href="bookinglogin.html">Booking</a>
@@ -42,91 +46,81 @@
 
     <main class="container">
       <section class="section">
-        <div class="hero">
-          <img src="assets/img/hero.png" alt="" />
-          <div class="hero-overlay">
-            <div class="hero-text">
-              <h1 class="h1">TIDLØS FRISØR KUNST</h1>
-              <h2 class="h2 hero-sub">I hjertet af København K</h2>
+        <div
+          class="card card-pad theme-secondary auth-card"
+          style="max-width: 560px; margin: 0 auto"
+        >
+          >
+          <h1 class="h1">Booking</h1>
+
+          <form>
+            <div class="field">
+              <div class="label">Brugernavn</div>
+              <input class="input" type="text" />
             </div>
-          </div>
-        </div>
 
-        <!-- Tekstboks under hero -->
-        <div class="card card-pad hero-note">
-          <h2 class="h2 hero-note-title">VELKOMMEN TIL SYNNE COIFFURE</h2>
-          <p class="p">
-            Midt i København ligger en salon, hvor ro, æstetik og kompromisløs
-            kvalitet går hånd i hånd. Frisørhåndværket bygger på mange års
-            erfaring og respekt for det enkelte menneske. <br /><br />
-            Hver behandling tager udgangspunkt i dig – dine træk, din stil og
-            dit liv. Intet er tilfældigt, og intet er forhastet.
-          </p>
-        </div>
-
-        <div class="split-list">
-          <article class="card split">
-            <div class="card-pad">
-              <h2 class="h2">Klip og form</h2>
-              <p class="p">
-                Form, balance og præcision. <br /><br />
-                Tilpasset dit hår og din hverdag.
-              </p>
+            <div class="field">
+              <div class="label">Kodeord</div>
+              <input class="input" type="password" />
             </div>
-            <div class="split-media">
-              <img src="assets/img/box1.jpg" alt="" />
-            </div>
-          </article>
 
-          <article class="card split reverse">
-            <div class="card-pad">
-              <h2 class="h2">Farve & forfinelse</h2>
-              <p class="p">
-                Naturlige nuancer og dybde. <br /><br />
-                Skabt med blik for helheden.
-              </p>
-            </div>
-            <div class="split-media">
-              <img src="assets/img/box2.jpg" alt="" />
-            </div>
-          </article>
+            <button class="btn full btn-sec2" type="button">Log ind</button>
 
-          <article class="card split">
-            <div class="card-pad">
-              <h2 class="h2">Book din tid</h2>
-              <p class="p">
-                En rolig oplevelse med fuld opmærksomhed. <br /><br />
-                Tid til dig - fra start til slut.
-              </p>
+            <p class="p" style="margin-top: 16px">
+              <a class="link" href="#">Har du glemt dit kodeord?</a>
+            </p>
 
-              <a class="booking-btn" href="bookinglogin.html">Booking</a>
-            </div>
-            <div class="split-media">
-              <img src="assets/img/box3.jpg" alt="" />
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2 class="h2 section-title-center">ØJEBLIKKE FRA SALONEN</h2>
-
-        <div class="gallery">
-          <div class="tile"><img src="assets/img/gallery1.jpg" alt="" /></div>
-          <div class="tile"><img src="assets/img/gallery2.jpg" alt="" /></div>
-          <div class="tile"><img src="assets/img/gallery3.jpg" alt="" /></div>
-        </div>
-
-        <!-- CTA nederst på forsiden -->
-        <div style="text-align: center; margin-top: 32px">
-          <p class="p p-center">Klar til din næste tid?</p>
-          <a class="booking-btn" href="bookinglogin.html">Book tid</a>
+            <h2 class="h2" style="margin-top: 32px">Har du ikke en bruger?</h2>
+            <p class="p"><a class="link" href="#">Tilmeld dig her</a></p>
+          </form>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container"><small>© Synne Coiffure</small></div>
+      <div class="container footer-inner">
+        <!-- Venstre: brand -->
+        <div class="footer-col footer-brand">
+          <a class="brand" href="index.html" aria-label="Forside">
+            <img class="brand-icon" src="assets/img/logo.png" alt="Logo" />
+            <span class="brand-text">Synne Coiffure</span>
+          </a>
+        </div>
+
+        <!-- Midte: adresse + telefon -->
+        <div class="footer-col footer-info">
+          <div class="footer-block">
+            <h3 class="footer-h3">Adresse</h3>
+            <p class="footer-p">Pilestræde 27,1112 København K</p>
+          </div>
+
+          <div class="footer-block">
+            <h3 class="footer-h3">Telefon</h3>
+            <p class="footer-p">33 93 33 92</p>
+          </div>
+        </div>
+
+        <!-- Højre: social -->
+        <div class="footer-col footer-social">
+          <h3 class="footer-h3">Følg os</h3>
+          <div class="social-row">
+            <a class="social-link" href="#" aria-label="Instagram">
+              <img
+                class="social-icon"
+                src="assets/img/instagram.png"
+                alt="Instagram"
+              />
+            </a>
+            <a class="social-link" href="#" aria-label="Facebook">
+              <img
+                class="social-icon"
+                src="assets/img/facebook.png"
+                alt="Facebook"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="js/menu.js"></script>
