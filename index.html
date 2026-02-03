@@ -18,7 +18,10 @@
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="logo" href="index.html">Brand</a>
+        <a class="brand" href="index.html" aria-label="Forside">
+          <img class="brand-icon" src="assets/img/logo.png" alt="Logo" />
+          <span class="brand-text">Synne Coiffure</span>
+        </a>
 
         <button
           class="burger"
@@ -33,7 +36,7 @@
         </button>
 
         <nav id="site-nav" class="nav" data-state="closed">
-          <a class="active" href="index.html">Forside</a>
+          <a href="index.html">Forside</a>
           <a href="priser.html">Priser</a>
           <a href="kontakt.html">Kontakt</a>
           <a class="nav-btn" href="bookinglogin.html">Booking</a>
@@ -133,7 +136,49 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container"><small>© Synne Coiffure</small></div>
+      <div class="container footer-inner">
+        <!-- Venstre: brand -->
+        <div class="footer-col footer-brand">
+          <a class="brand" href="index.html" aria-label="Forside">
+            <img class="brand-icon" src="assets/img/logo.png" alt="Logo" />
+            <span class="brand-text">Synne Coiffure</span>
+          </a>
+        </div>
+
+        <!-- Midte: adresse + telefon -->
+        <div class="footer-col footer-info">
+          <div class="footer-block">
+            <h3 class="footer-h3">Adresse</h3>
+            <p class="footer-p">Pilestræde 27,1112 København K</p>
+          </div>
+
+          <div class="footer-block">
+            <h3 class="footer-h3">Telefon</h3>
+            <p class="footer-p">33 93 33 92</p>
+          </div>
+        </div>
+
+        <!-- Højre: social -->
+        <div class="footer-col footer-social">
+          <h3 class="footer-h3">Følg os</h3>
+          <div class="social-row">
+            <a class="social-link" href="#" aria-label="Instagram">
+              <img
+                class="social-icon"
+                src="assets/img/instagram.png"
+                alt="Instagram"
+              />
+            </a>
+            <a class="social-link" href="#" aria-label="Facebook">
+              <img
+                class="social-icon"
+                src="assets/img/facebook.png"
+                alt="Facebook"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <script src="js/menu.js"></script>
